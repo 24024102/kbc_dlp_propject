@@ -2,17 +2,17 @@
   "rules": [
     {
       "id": "credit_card",
-      "pattern": "\\b(?:\\d[ -]*?){13,16}\\b",
+      "pattern": "\\d{4}-\\d{4}-\\d{4}-\\d{4}",
       "points": 50
     },
     {
       "id": "iban",
-      "pattern": "[A-Z]{2}\\d{2}[A-Z0-9]{11,30}",
+      "pattern": "BG\\d{2}KBCB\\d{10}",
       "points": 60
     },
     {
-      "id": "confidential_words",
-      "pattern": "(?i)(secret|confidential|internal only|password)",
+      "id": "secret_keyword",
+      "pattern": "(?i)(internal only|confidential|secret)",
       "points": 25
     }
   ],
