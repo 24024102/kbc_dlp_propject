@@ -1,10 +1,23 @@
 {
-    "critical":{
-        "credic_card": "\\b(?:\\d[ -]*?){13,16}\\b",
-        "iban": "[A-Z]{?}\\d{2}[A-Z0-9]{11,30}"
+  "rules": [
+    {
+      "id": "credit_card",
+      "pattern": "\\b(?:\\d[ -]*?){13,16}\\b",
+      "points": 50
     },
-    "medium":{
-        "confident_mark":"(?i)(condfidentional| interna; only| private property)",
-        "salary_info" :"(?i)(salary|payment|bonus amount)"
+    {
+      "id": "iban",
+      "pattern": "[A-Z]{2}\\d{2}[A-Z0-9]{11,30}",
+      "points": 60
+    },
+    {
+      "id": "confidential_words",
+      "pattern": "(?i)(secret|confidential|internal only|password)",
+      "points": 25
     }
+  ],
+  "thresholds": {
+    "critical": 70,
+    "warning": 25
+  }
 }
