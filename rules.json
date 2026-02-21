@@ -1,0 +1,10 @@
+{
+    "critical":{
+        "credic_card": "\\b(?:\\d[ -]*?){13,16}\\b",
+        "iban": "[A-Z]{?}\\d{2}[A-Z0-9]{11,30}"
+    },
+    "medium":{
+        "confident_mark":"(?i)(condfidentional| interna; only| private property)",
+        "salary_info" :"(?i)(salary|payment|bonus amount)"
+    }
+}
